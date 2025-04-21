@@ -117,6 +117,8 @@ app.UseStaticFiles(new StaticFileOptions
     RequestPath = "/images"
 });
 
+// Will be adding logging in the future
+
 app.MapControllers();
 
 app.Run();
