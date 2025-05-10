@@ -59,7 +59,7 @@ namespace NZWalks.API.Controllers
         // GET : https://localhost:7056/api/regions/{id}
         [HttpGet]
         [Route("{id:guid}")]
-        [Authorize(Roles = "Reader")]
+        //[Authorize(Roles = "Reader")]
         public async Task<IActionResult> GetById([FromRoute] Guid id)
         {
             // Get Region Domain Model From Database
@@ -79,7 +79,7 @@ namespace NZWalks.API.Controllers
         // POST : https://localhost:7056/api/regions
         [HttpPost]
         [ValidateModel]
-        [Authorize(Roles = "Writer")]
+        //[Authorize(Roles = "Writer")]
         public async Task<IActionResult> Create([FromBody] AddRegionRequestDto addRegionRequestDto)
         {
             // Map / Convert DTO to Domain Model using mapper
@@ -101,7 +101,7 @@ namespace NZWalks.API.Controllers
         [HttpPut]
         [Route("{id:guid}")]
         [ValidateModel]
-        [Authorize(Roles = "Writer")]
+        //[Authorize(Roles = "Writer")]
         public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UpdateRegionRequestDto updateRegionRequestDto)
         {
             // Map DTO to Domain Model using mapper
@@ -125,7 +125,7 @@ namespace NZWalks.API.Controllers
         // DELETE : https://localhost:7056/api/regions/{id}
         [HttpDelete]
         [Route("{id:Guid}")]
-        [Authorize(Roles = "Writer")]
+        //[Authorize(Roles = "Writer")]
         public async Task<IActionResult> Delete([FromRoute] Guid id)
         {
             // Implemented Repository Pattern
