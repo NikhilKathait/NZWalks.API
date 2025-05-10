@@ -1,8 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using NZWalks.Web.Models;
+using NZWalks.UI.Models;
 
-namespace NZWalks.Web.Controllers;
+namespace NZWalks.UI.Controllers;
 
 public class HomeController : Controller
 {
