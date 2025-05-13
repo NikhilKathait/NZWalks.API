@@ -18,7 +18,7 @@ var builder = WebApplication.CreateBuilder(args);
 var logger = new LoggerConfiguration()
     .WriteTo.Console()
     .WriteTo.File("Logs/NZWalks_Logs.txt", rollingInterval: RollingInterval.Day)
-    .MinimumLevel.Information()
+    .MinimumLevel.Warning()
     .CreateLogger();
 
 builder.Logging.ClearProviders();
